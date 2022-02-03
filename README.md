@@ -24,7 +24,7 @@
 ----
 ## Instructions:
 
-1. Set the following variables in the file: `setups.sh`: 
+1. Set the following variables in the file: `setups.sh` No slash `/` at the end in the paths: 
    * `SOURCE` **Type:** String. **Path** to the directory to be packaged. Each **level 1** subdirectory will be packaged into a tarball independly. If it's desired to pack all data in an **unique** tarball then select a super directory and choose only the subdirectory to pack setting the variable `ONLYDIRS`
      * `SOURCE="/path/to/dir"`
    * `DESTINATION` **Type:** String. **Path** to the drive to store the tarballs.
@@ -32,7 +32,7 @@
    * `ONLYDIRS` **Type:** Array, each value of this array is a string with the path to the directories which be only included in the backup. The backup will be executed only for these directories. The default value set for all directories is: `ONLYDIRS=("*")` **These paths must be set for only the next level of `SOURCE`**
      * `ONLYDIRS=("/path/to/dir01" "/path/to/dir02")`
    * `EXCLUDES` **Type:** Array. **Paths**, **patterns** or **dirs/files names** to exclude in the backup. **These paths can be in all level directories**
-     * `EXCLUDES=(".git" ".DS_Store" "node_modules")`.
+     * `EXCLUDES=(".git" ".DS_Store" "node_modules" "*.mp4")`.
    * `OPTIONS` **Type:** String. Tar options: -h: symlinks, [-z: gzip || -j: gzip2 (more compression)] Compression works without `-ML`, -c: compress, -v: verbose mode, -f: Allows you to specify the filename of the archive. 
      * `OPTIONS="-hcjvf"`
    * `VOLUMESIZE` **Type:** String. Maximum size of each tarball. Is integer value followed by the suffix.
