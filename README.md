@@ -24,7 +24,7 @@
 ----
 ## Instructions:
 
-1. Set the following variables in the file: `setups.sh` No slash `/` at the end in the paths: 
+1. Set the following variables in the file: `setups.sh` No slash `/` at the end in the paths:
    * `SOURCE` **Type:** String. **Path** to the directory to be packaged. Each **level 1** subdirectory will be packaged into a tarball independly. If it's desired to pack all data in an **unique** tarball then select a super directory and choose only the subdirectory to pack setting the variable `ONLYDIRS`
      * `SOURCE="/path/to/dir"`
    * `DESTINATION` **Type:** String. **Path** to the drive to store the tarballs.
