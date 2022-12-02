@@ -13,18 +13,12 @@
 
 ----
 
-### Backups using Tar an archiving utility.
+This script creates safety backups of data using Tar an archiving utility.
 
-[Tar Manual](http://www.gnu.org/software/tar/manual)
 
-[Tar Repository](https://savannah.gnu.org/git/?group=tar)
-
-[Tar Repository](https://git.savannah.gnu.org/cgit/tar.git)
-
-----
 ## Instructions:
 
-1. Set the following variables in the file: `setups.sh` No slash `/` at the end in the paths:
+1. Set the following variables in the file: `setups.sh` **Always use abusolete paths.** No slash `/` at the end in the paths:
    * `SOURCE` **Type:** String. **Path** to the directory to be packaged. Each **level 1** subdirectory will be packaged into a tarball independly. If it's desired to pack all data in an **unique** tarball then select a super directory and choose only the subdirectory to pack setting the variable `ONLYDIRS`
      * `SOURCE="/path/to/dir"`
    * `DESTINATION` **Type:** String. **Path** to the drive to store the tarballs.
@@ -57,6 +51,36 @@
 
 ## Features:
 
-1. If the compression proccess is suspended, the script starts from the last level 1 subdirectory executed.
+1. In the progress of the data copying process if the compression proccess is suspended, the script starts from the last first level subdirectory executed.
+
+## Code instrucctions:
+
+1. `setups.sh` is imported into `starts.sh`.
+2. The number of directories to compress is got with: `SIZE=${#ONLYTHESEDIRS[*]}` to use it with: `${ONLYTHESEDIRS[j]}`
+3. The content of the `.resume` file is taken to verify from what directory is necesary to start the compression.
+4. `BAN=false` is set, to set it as `true` when the loop `for i in "$DIRSOURCES"/*;` reaches the directory to start to compression.
+5. `printf "n $DIRDESTINATION/$NAME-%02d.tar\n" {2..74} |` Pipe the `tar` command allowing to excecute the `-ML $VOLUMESIZE` automatically without asking in console for the user interaction.
+
+## TODO:
+
+1. In an evolutionary stage make backups of complete websites using existing tools or creating new ones.
+
+## Dependencies:
+
+[Tar Manual](http://www.gnu.org/software/tar/manual)
+
+[Tar Repository](https://savannah.gnu.org/git/?group=tar)
+
+[Tar Repository](https://git.savannah.gnu.org/cgit/tar.git)
+
+## External links, resources, citations, notes, related or similars projects:
+
+### Own:
+
+1. Search engine, bot and scrapper.
+
+### Outsider: 
+
+1. https://archivebox.io/
 
 ----

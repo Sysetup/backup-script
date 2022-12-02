@@ -10,7 +10,7 @@ DESTINATION="."
 ONLYDIRS=("*") #Default: ONLYDIRS=("*") All directories will be executed.
 
 ## Excludes:
-EXCLUDES=(".git" ".DS_Store" "node_modules" "*.mp4")
+EXCLUDES=(".git" ".DS_Store" "node_modules") #EXCLUDES=(".git" ".DS_Store" "node_modules" "*.mp4")
 
 ## Volume size:
 VOLUMESIZE="3G"
