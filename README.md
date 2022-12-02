@@ -67,11 +67,7 @@ This script creates safety backups of data using Tar an archiving utility.
 
 ## Dependencies:
 
-[Tar Manual](http://www.gnu.org/software/tar/manual)
-
-[Tar Repository](https://savannah.gnu.org/git/?group=tar)
-
-[Tar Repository](https://git.savannah.gnu.org/cgit/tar.git)
+1. [Tar Manual](http://www.gnu.org/software/tar/manual), [Tar Repository](https://savannah.gnu.org/git/?group=tar), [Tar Repository](https://git.savannah.gnu.org/cgit/tar.git)
 
 ## External links, resources, citations, notes, related or similars projects:
 
