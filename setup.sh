@@ -16,4 +16,4 @@ EXCLUDES=(".git" ".DS_Store" "node_modules") #EXCLUDES=(".git" ".DS_Store" "node
 VOLUMESIZE="3G"
 
 ## Tar options:
-OPTIONS="-hcvf" #-h: symlinks, [-z: gzip || -j: gzip2 (more compression)] Compression works without `-ML`, -c: compress, -v: verbose mode, -f: Allows you to specify the filename of the archive.
+OPTIONS="-hcvf" #-h: symlinks, [-z: gzip || -j: gzip2 (more compression)] Compression using -z or -j works without `-ML`, -c: compress works with `-ML`, -v: verbose mode, -f: Allows you to specify the filename of the archive.
